@@ -10,39 +10,19 @@ BoxBoxCast is a full-stack Formula 1 weather prediction and car performance anal
 - Dynamic Tire Recommendations** (Soft, Medium, Hard, Intermediates, Full Wets)
 - Pit Stop & Fuel Strategy Suggestions**
 - Modern UI built with **React + TailwindCSS**
-- Fully functional **FastAPI backend** serving data to frontend
-
----
-
-##  Project Structure
-BoxBoxCast/
-├── backend/ # FastAPI backend
-│ ├── main.py # Entry point for API
-│ ├── routes/ # API routes
-│ ├── f1_logic.py # F1 simulation logic
-│ ├── weather_service.py # Weather data fetcher
-│ └── venv/ # Virtual environment (ignored in Git)
-│
-├── frontend/ # React frontend
-│ ├── src/ # Components, pages, UI logic
-│ ├── public/ # Public assets
-│ └── tailwind.config.js
-│
-├── .gitignore
-├── LICENSE
-└── README.md
+- Fully functional **FastAPI backend** serving data to frontend,
 
 
 ---
+## 🚀 Installation & Usage
 
-##  Installation & Usage
-
- 1. Clone the Repository
+### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/aaisha077/BoxBoxCast.git
 cd BoxBoxCast
+--
 
-2. Backend Setup (FastAPI)
+### 2️⃣ Backend Setup (FastAPI)
 cd backend
 python3 -m venv venv
 source venv/bin/activate   # For Mac/Linux
@@ -52,13 +32,17 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 Backend will run on: http://127.0.0.1:8000
 
-3. Frontend Setup (React)
+--
+
+### 3️⃣ Frontend Setup (React)
 cd frontend
 npm install
 npm start
 Frontend will run on: http://localhost:3000
 
- How to Use
+
+
+🖥️ How to Use
 
 Open the frontend in your browser.
 Select a circuit to view live weather conditions.
