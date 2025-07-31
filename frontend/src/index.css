@@ -8,7 +8,7 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
-/* ✅ Neon glow effect for title */
+/*  Neon glow effect for title */
 @keyframes neonGlow {
   0% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000; }
   50% { text-shadow: 0 0 10px #ff1a1a, 0 0 20px #ff1a1a, 0 0 40px #ff1a1a; }
@@ -20,7 +20,7 @@ body {
   animation: neonGlow 1.5s infinite alternate;
 }
 
-/* ✅ Racing lines animation */
+/*  Racing lines animation */
 @keyframes trackMove {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }

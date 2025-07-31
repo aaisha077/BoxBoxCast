@@ -6,7 +6,7 @@ const CircuitModal = ({ circuit, onClose }) => {
   const [loading, setLoading] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
   const [performance, setPerformance] = useState(null);
-  const [drsEnabled, setDrsEnabled] = useState(false); // ✅ DRS state
+  const [drsEnabled, setDrsEnabled] = useState(false); //  DRS state
 
   // Tire Data
   const tireData = {
@@ -234,7 +234,7 @@ const CircuitModal = ({ circuit, onClose }) => {
                   exit={{ opacity: 0 }}
                   className="bg-gray-700 p-3 rounded-lg text-white"
                 >
-                  {/* ✅ DRS Toggle */}
+                  {/*  DRS Toggle */}
                   <label className="flex items-center mb-2">
                     <input
                       type="checkbox"
