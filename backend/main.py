@@ -19,22 +19,22 @@ app.add_middleware(
 
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
-# ✅ KEEP THIS ROUTE FIRST (before /weather/{city})
+#  KEEP THIS ROUTE FIRST (before /weather/{city})
 @app.get("/weather/coords")
 def get_weather_by_coords(lat: float, lon: float):
-    print("🔥 ENTERED /weather/coords", flush=True)
+    print(" ENTERED /weather/coords", flush=True)
 
     if not OPENWEATHER_API_KEY:
         return {"error": "Missing API key"}
 
     url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPENWEATHER_API_KEY}&units=metric"
-    print("🌍 URL:", url, flush=True)
+    print(" URL:", url, flush=True)
 
     r = requests.get(url).json()
-    print("✅ RAW RESPONSE:", r, flush=True)
+    print(" RAW RESPONSE:", r, flush=True)
 
-    # ✅ Simply return the raw API response
-    # ✅ Clean and flatten the response for React
+    #  Simply return the raw API response
+    #  Clean and flatten the response for React
     wind = r.get("wind", {})
     main = r.get("main", {})
     rain = r.get("rain", {})
@@ -49,17 +49,17 @@ def get_weather_by_coords(lat: float, lon: float):
 }
 
 
-# ✅ query param version
+#  query param version
 @app.get("/weather")
 def get_weather_query(city: str = "Monaco"):
     return fetch_weather(city)
 
-# ✅ path param version
+#  path param version
 @app.get("/weather/{city}")
 def get_weather_path(city: str):
     return fetch_weather(city)
 
-# ✅ shared logic
+#  shared logic
 def fetch_weather(city: str):
     if not OPENWEATHER_API_KEY:
         return {"error": "Missing API key"}
