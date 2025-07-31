@@ -9,10 +9,10 @@ def get_weather(city):
     r = requests.get(url)
     data = r.json()
     
-    # ✅ Debug log (temporarily)
+    #  Debug log (temporarily)
     print("DEBUG WEATHER DATA:", data)
 
-    # ✅ Check if API returned error
+    #  Check if API returned error
     if r.status_code != 200 or "main" not in data:
         return None
     
