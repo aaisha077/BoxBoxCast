@@ -42,9 +42,9 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col items-center relative overflow-hidden bg-gray-900">
       
-      {/* ✅ F1-Themed Dynamic Background */}
+      {/*  F1-Themed Dynamic Background */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-gradient-to-r from-black via-gray-900 to-black">
-        {/* 🔥 Moving Racing Lines */}
+        {/*  Moving Racing Lines */}
         <div className="absolute inset-0 opacity-10">
           {[...Array(10)].map((_, i) => (
             <div
@@ -58,7 +58,7 @@ function App() {
           ))}
         </div>
 
-        {/* 🔥 Circuit Track Pattern */}
+        {/*  Circuit Track Pattern */}
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -68,7 +68,7 @@ function App() {
           }}
         ></div>
 
-        {/* 🔥 F1 Car Background */}
+        {/*  F1 Car Background */}
         <div
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 opacity-20"
           style={{
@@ -82,10 +82,10 @@ function App() {
         ></div>
       </div>
 
-      {/* ✅ Content Container */}
+      {/*  Content Container */}
       <div className="relative z-10 w-full p-6 flex flex-col items-center">
         
-        {/* ✅ Title */}
+        {/*  Title */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-extrabold mb-2 text-red-400 tracking-tight"
               style={{ textShadow: "0 0 8px rgba(233, 0, 0, 0.5)", fontFamily: "'Titillium Web', sans-serif" }}>
@@ -97,7 +97,7 @@ function App() {
           </h2>
         </div>
 
-        {/* ✅ Slider */}
+        {/*  Slider */}
         <div className="relative w-full max-w-6xl overflow-hidden flex justify-center items-center border-t-2 border-b-2 border-red-600 py-8">
           
           {/* Left Button */}
@@ -110,7 +110,7 @@ function App() {
             ◀
           </button>
 
-          {/* ✅ Sliding Track */}
+          {/*  Sliding Track */}
           <div className="flex transition-transform duration-300 ease-in-out"
                style={{ transform: `translateX(-${currentIndex * 100}%)`, width: `${totalPages * 100}%` }}>
             {Array.from({ length: totalPages }).map((_, pageIndex) => (
@@ -134,7 +134,7 @@ function App() {
           </button>
         </div>
 
-        {/* ✅ Page Indicators */}
+        {/*  Page Indicators */}
         <div className="flex items-center mt-8">
           {Array.from({ length: totalPages }).map((_, index) => (
             <div key={index} className={`w-3 h-3 mx-1 rounded-full ${currentIndex === index ? "bg-red-600" : "bg-gray-600"} transition-all`}></div>
@@ -142,7 +142,7 @@ function App() {
         </div>
       </div>
 
-      {/* ✅ Fullscreen Modal */}
+      {/*  Fullscreen Modal */}
       <CircuitModal circuit={selectedCircuit} onClose={closeModal} />
     </div>
   );
