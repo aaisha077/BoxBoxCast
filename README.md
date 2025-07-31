@@ -1,7 +1,10 @@
-# BoxBoxCast
-BoxBoxCast is a full-stack Formula 1 weather prediction and car performance analysis website. It fetches real-time weather data using the OpenWeather API and predicts car performance metrics such as grip, downforce, engine power, and lap time based on dynamic conditions. The backend, built with FastAPI, exposes RESTful APIs, while the React.js frontend provides an interactive UI. The project integrates weather-based strategies like DRS and tire recommendations for an enhanced Formula 1 experience.
+# 🏎️ BoxBoxCast
 
-## ✨ Features
+BoxBoxCast is a **Formula 1 weather & performance analysis app**.
+It uses **FastAPI** (backend) and **React + TailwindCSS** (frontend) to fetch real-time weather via **OpenWeather API** and simulate car performance, DRS, and tire strategies dynamically.
+
+
+##  Features
 - **Live Weather Fetching** using FastAPI backend  
 - **Performance Simulation** based on weather factors (grip, downforce, power)  
 - **DRS (Drag Reduction System) Integration** with realistic lap time boost  
@@ -10,7 +13,7 @@ BoxBoxCast is a full-stack Formula 1 weather prediction and car performance anal
 - Modern UI built with **React + TailwindCSS**  
 - Fully functional **FastAPI backend** serving data to frontend  
 
-## 🚀 Installation & Usage
+##  Installation & Usage
 
 ### 🔹 Step 1: Clone the Repository
 Run the following commands to clone and navigate to the project folder:
