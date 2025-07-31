@@ -28,8 +28,9 @@ source venv/bin/activate   # For Mac/Linux
 venv\Scripts\activate      # For Windows
 pip install -r requirements.txt
 uvicorn main:app --reload
-➡️ Backend will run on: http://127.0.0.1:8000
 ```
+➡️ Backend will run on: http://127.0.0.1:8000
+
 ### 🔹 Step 3: Frontend Setup (React)
 Set up and run the React frontend with:
 
@@ -37,8 +38,9 @@ Set up and run the React frontend with:
 cd frontend
 npm install
 npm start
-➡️ Frontend will run on: http://localhost:3000
 ```
+➡️ Frontend will run on: http://localhost:3000
+
 🖥️ How to Use
 
 1. Open the frontend in your browser.
