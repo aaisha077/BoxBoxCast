@@ -12,7 +12,7 @@ BoxBoxCast is a full-stack Formula 1 weather prediction and car performance anal
 
 ## 🚀 Installation & Usage
 
-### 🔹 Step 1: Clone the Repository
+🔹 Step 1: Clone the Repository
 Run the following commands to clone and navigate to the project folder:
 ```bash
 git clone https://github.com/aaisha077/BoxBoxCast.git
@@ -20,6 +20,7 @@ cd BoxBoxCast
 🔹 Step 2: Backend Setup (FastAPI)
 Set up and run the FastAPI backend with:
 
+'''bash
 cd backend
 python3 -m venv venv
 source venv/bin/activate   # For Mac/Linux
@@ -31,6 +32,7 @@ uvicorn main:app --reload
 🔹 Step 3: Frontend Setup (React)
 Set up and run the React frontend with:
 
+'''bash
 cd frontend
 npm install
 npm start
