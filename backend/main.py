@@ -3,8 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 import requests, os
 from dotenv import load_dotenv
 from f1_logic import calculate_performance
-from database import weather_logs
-from bson import ObjectId
 
 load_dotenv()
 app = FastAPI()
@@ -19,22 +17,15 @@ app.add_middleware(
 
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
-#  KEEP THIS ROUTE FIRST (before /weather/{city})
+#  Get weather by coordinates
 @app.get("/weather/coords")
 def get_weather_by_coords(lat: float, lon: float):
-    print(" ENTERED /weather/coords", flush=True)
-
     if not OPENWEATHER_API_KEY:
         return {"error": "Missing API key"}
 
     url = f"http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPENWEATHER_API_KEY}&units=metric"
-    print(" URL:", url, flush=True)
-
     r = requests.get(url).json()
-    print(" RAW RESPONSE:", r, flush=True)
 
-    #  Simply return the raw API response
-    #  Clean and flatten the response for React
     wind = r.get("wind", {})
     main = r.get("main", {})
     rain = r.get("rain", {})
@@ -46,20 +37,19 @@ def get_weather_by_coords(lat: float, lon: float):
         "wind": wind.get("speed", 0),
         "wind_deg": wind.get("deg", 0),
         "wind_gust": wind.get("gust", 0)
-}
+    }
 
-
-#  query param version
+#  Weather by city (query parameter)
 @app.get("/weather")
 def get_weather_query(city: str = "Monaco"):
     return fetch_weather(city)
 
-#  path param version
+#  Weather by city (path parameter)
 @app.get("/weather/{city}")
 def get_weather_path(city: str):
     return fetch_weather(city)
 
-#  shared logic
+#  Shared logic
 def fetch_weather(city: str):
     if not OPENWEATHER_API_KEY:
         return {"error": "Missing API key"}
@@ -92,7 +82,5 @@ def fetch_weather(city: str):
         "performance": performance
     }
 
-    inserted = weather_logs.insert_one(weather_data)
-    weather_data["_id"] = str(inserted.inserted_id)
-
+    
     return weather_data
