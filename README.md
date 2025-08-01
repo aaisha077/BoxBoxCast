@@ -50,11 +50,25 @@ npm start
 2. Select a circuit to view live weather conditions.
 3. Toggle DRS in performance simulation for dry tracks.
 4. Get recommended tires, lap time predictions, and strategy suggestions.
+
+
 ## 📸 Screenshots
 
 ### Home Page
 ![Home Page](screenshots/home.png)
 
-### Weather & Performance Analysis
+### Data Analysis
 ![Performance](screenshots/performance.png)
+
+### Weather Data  
+![Weather](screenshots/weather.png)  
+
+### Tire Recommendations  
+![Tire Recommendations](screenshots/tyre.png)  
+
+### Performance Simulation  
+![Performance Simulation](screenshots/performance_simulation.png)  
+
+### Pit Stop Strategy  
+![Pit Stop Strategy](screenshots/pit_stop.png)  
 
